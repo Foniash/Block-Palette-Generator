@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Palette Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Geologica:wght@100..900&family=Murecho:wght@100..900&family=Roboto+Slab:wght@100..900&family=Unbounded:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="images/block_palette_generator_icon_5.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+<body onkeyup="buttonCheck()" keydown onload="generateBlocks()">
+
+    <script src="block_generation.js"></script>
+
+    <header>
+        <div class="header">
+            <p id="header_title">Block Palette Generator</p>
+            <img id="header_icon" src="images/BPG_icon.png" alt="Header icon" width="72px">
+            <a class="header_link" onclick="smoothScroll()">Block Palette Generator</a>
+            <a class="header_link" href="https://www.youtube.com/watch?v=PkW7dVL5t3c" target="_blank">Guide</a>
+        </div>
+    </header>
+    
+    <h1 class="BPG_title" id="BPG_title">Generate your own unique block palette</h1>
+    
+    <article>
+        <div class="block_generator_panel">
+            <div class="blocks-panel-background">
+                <div class="block-container" id="block_1">
+                    <img src="images/diorite.webp" id="block-image-1" alt="Diorite" width="64px">
+                    <div class="block-container-buttons">
+                        <button id="block-button-1" onclick="lockUnlock(0, 'block-button-1')">
+                            <svg width="80%" height="80%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18 10.5C19.6569 10.5 21 11.8431 21 13.5V19.5C21 21.1569 19.6569 22.5 18 22.5H6C4.34315 22.5 3 21.1569 3 19.5V13.5C3 11.8431 4.34315 10.5 6 10.5V7.5C6 4.18629 8.68629 1.5 12 1.5C15.3137 1.5 18 4.18629 18 7.5V10.5ZM12 3.5C14.2091 3.5 16 5.29086 16 7.5V10.5H8V7.5C8 5.29086 9.79086 3.5 12 3.5ZM18 12.5H6C5.44772 12.5 5 12.9477 5 13.5V19.5C5 20.0523 5.44772 20.5 6 20.5H18C18.5523 20.5 19 20.0523 19 19.5V13.5C19 12.9477 18.5523 12.5 18 12.5Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="block-container" id="block_2" onclick="lockUnlock(1, 'block-button-2')">
+                    <img src="images/granite.webp" id="block-image-2" alt="Granite" width="64px">
+                    <div class="block-container-buttons">
+                        <button id="block-button-2">
+                            <svg width="80%" height="80%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18 10.5C19.6569 10.5 21 11.8431 21 13.5V19.5C21 21.1569 19.6569 22.5 18 22.5H6C4.34315 22.5 3 21.1569 3 19.5V13.5C3 11.8431 4.34315 10.5 6 10.5V7.5C6 4.18629 8.68629 1.5 12 1.5C15.3137 1.5 18 4.18629 18 7.5V10.5ZM12 3.5C14.2091 3.5 16 5.29086 16 7.5V10.5H8V7.5C8 5.29086 9.79086 3.5 12 3.5ZM18 12.5H6C5.44772 12.5 5 12.9477 5 13.5V19.5C5 20.0523 5.44772 20.5 6 20.5H18C18.5523 20.5 19 20.0523 19 19.5V13.5C19 12.9477 18.5523 12.5 18 12.5Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="block-container" id="block_3" onclick="lockUnlock(2, 'block-button-3')">
+                    <img src="images/stone.webp" id="block-image-3" alt="Stone" width="64px">
+                    <div class="block-container-buttons">
+                        <button id="block-button-3">
+                            <svg width="80%" height="80%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18 10.5C19.6569 10.5 21 11.8431 21 13.5V19.5C21 21.1569 19.6569 22.5 18 22.5H6C4.34315 22.5 3 21.1569 3 19.5V13.5C3 11.8431 4.34315 10.5 6 10.5V7.5C6 4.18629 8.68629 1.5 12 1.5C15.3137 1.5 18 4.18629 18 7.5V10.5ZM12 3.5C14.2091 3.5 16 5.29086 16 7.5V10.5H8V7.5C8 5.29086 9.79086 3.5 12 3.5ZM18 12.5H6C5.44772 12.5 5 12.9477 5 13.5V19.5C5 20.0523 5.44772 20.5 6 20.5H18C18.5523 20.5 19 20.0523 19 19.5V13.5C19 12.9477 18.5523 12.5 18 12.5Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="block-container" id="block_4" onclick="lockUnlock(3, 'block-button-4')">
+                    <img src="images/polished_basalt.webp" id="block-image-4" alt="Polished Basalt" width="64px">
+                    <div class="block-container-buttons">
+                        <button id="block-button-4">
+                            <svg width="80%" height="80%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18 10.5C19.6569 10.5 21 11.8431 21 13.5V19.5C21 21.1569 19.6569 22.5 18 22.5H6C4.34315 22.5 3 21.1569 3 19.5V13.5C3 11.8431 4.34315 10.5 6 10.5V7.5C6 4.18629 8.68629 1.5 12 1.5C15.3137 1.5 18 4.18629 18 7.5V10.5ZM12 3.5C14.2091 3.5 16 5.29086 16 7.5V10.5H8V7.5C8 5.29086 9.79086 3.5 12 3.5ZM18 12.5H6C5.44772 12.5 5 12.9477 5 13.5V19.5C5 20.0523 5.44772 20.5 6 20.5H18C18.5523 20.5 19 20.0523 19 19.5V13.5C19 12.9477 18.5523 12.5 18 12.5Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="block-container" id="block_5" onclick="lockUnlock(4, 'block-button-5')">
+                    <img src="images/stripped_oak_log.webp" id="block-image-5" alt="Striped oak Log" width="64px">
+                    <div class="block-container-buttons">
+                        <button id="block-button-5">
+                            <svg width="80%" height="80%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M18 10.5C19.6569 10.5 21 11.8431 21 13.5V19.5C21 21.1569 19.6569 22.5 18 22.5H6C4.34315 22.5 3 21.1569 3 19.5V13.5C3 11.8431 4.34315 10.5 6 10.5V7.5C6 4.18629 8.68629 1.5 12 1.5C15.3137 1.5 18 4.18629 18 7.5V10.5ZM12 3.5C14.2091 3.5 16 5.29086 16 7.5V10.5H8V7.5C8 5.29086 9.79086 3.5 12 3.5ZM18 12.5H6C5.44772 12.5 5 12.9477 5 13.5V19.5C5 20.0523 5.44772 20.5 6 20.5H18C18.5523 20.5 19 20.0523 19 19.5V13.5C19 12.9477 18.5523 12.5 18 12.5Z" fill="currentColor"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="panel-button-generate-background">
+                <button id="panel-button-generate" onclick="generateBlocks()">Generate</button>
+                <p id="panel-button-generate-tip">*You can use [space] as well</p>
+            </div>
+        </div>
+    </article>
+</body>
+</html>
